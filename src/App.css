@@ -1,0 +1,13 @@
+.home {
+  flex: 1;
+  height: 100vh;
+  padding: 24px;
+}
+
+.grid {
+  display: flex;
+  width: 100%;
+  flex-flow: wrap;
+  overflow: scroll;
+  height: 100vh;
+}

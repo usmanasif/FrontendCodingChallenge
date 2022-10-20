@@ -1,0 +1,89 @@
+p {
+  margin: 0 !important;
+}
+
+.card {
+  border: 5px solid #000 !important;
+  margin: 18px;
+  padding: 12px;
+  border-radius: 10px !important;
+  width: 30% !important;
+  min-width: 30% !important;
+}
+
+.profile {
+  display: flex;
+}
+
+.info {
+  align-self: center;
+  margin-left: 10px;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.initial {
+  text-align: center;
+  font-size: 48px;
+}
+
+.name {
+  color: #2c3f51;
+  font-size: 25px;
+  font-weight: 800;
+  line-break: auto;
+}
+
+.occupation {
+  color: #96a5a6;
+  font-size: 17px;
+  font-weight: 800;
+  margin-top: -4px;
+}
+
+.data {
+  display: flex;
+  margin-top: -8px;
+}
+
+.graph {
+  width: 65%;
+  text-align: center;
+}
+
+.impressions {
+  color: #e88938;
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: -10px !important;
+}
+
+.numbers {
+  text-align: right;
+  margin-bottom: -5px;
+}
+
+.heading {
+  color: #c7cccf;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.conversions {
+  color: #3888bd
+}
+
+.total {
+  color: #27ae60;
+  font-weight: 800;
+  padding-top: 8px;
+  text-align: right;
+}
+
+.logs {
+  width: 35%;
+}
