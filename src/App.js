@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css'
 import axios from 'axios'
-import jsonData from './logs.json'
+
 import Card from './components/card'
+import jsonData from './logs.json'
+
 import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 const App = () => {
   const [URL] = useState(process.env.REACT_APP_URL)
@@ -31,11 +33,7 @@ const App = () => {
       var impression = 0
       var conversion = 0
 
-      if (e.type === 'impression') {
-        impression =  1
-      } else {
-        conversion = 1
-      }
+      e.type === 'impression' ? impression =  1 : conversion = 1
 
       if(obj[e.user_id] === undefined) {  
         obj[e.user_id] = {
@@ -60,10 +58,8 @@ const App = () => {
   }
 
   return <div className='home'>
-    {users?.length>0 && <>
-        <div className='grid'>{
-          users.map((e, index) => <Card key={index+''} data={e} log={logs[e.fields.Id]}></Card>)}</div>
-      </>
+    {users?.length>0 && <div className='grid'>{
+      users.map((e, index) => <Card key={index+''} data={e} log={logs[e.fields.Id]}></Card>)}</div>
     }
   </div>
 }

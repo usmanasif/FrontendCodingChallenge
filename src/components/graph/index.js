@@ -41,9 +41,7 @@ const Graph = ({xAxis, yAxis}) => {
     datasets: [{ data: yAxis, fill: false }]
   })
 
-  useEffect(() => {
-    formatDate()
-  })
+  useEffect(() => formatDate(), [])
 
   const formatDate = () => {
     let start = xAxis[0].split('-')

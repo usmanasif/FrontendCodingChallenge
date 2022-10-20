@@ -11,13 +11,20 @@ const Card = ({ data, log }) => {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
+    generateRandomColor()
+    generateGraph()
+  }, [])
+
+  const generateRandomColor = () => {
     let n = (Math.random() * 0xfffff * 1000000).toString(16)
     setColor('#' + n.slice(0, 6))
+  }
 
+  const generateGraph = () => {
     setXAxis(Object.keys(log.graph).sort((a,b) => new Date(b.date) - new Date(a.date)))
     setYAxis(Object.values(log.graph))
     setLoading(false)
-  }, [])
+  }
 
   return <div className='card'>
     <div className='profile'>
