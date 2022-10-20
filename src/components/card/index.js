@@ -1,4 +1,7 @@
 import { useEffect, useState } from 'react'
+
+import Graph from '../graph'
+
 import './index.css'
 
 const Card = ({ data, log }) => {
@@ -32,7 +35,9 @@ const Card = ({ data, log }) => {
       </div>
     </div>
     <div className='data'>
-      <div className='graph'></div>
+      <div className='graph'>
+        {!loading && <Graph xAxis={xAxis} yAxis={yAxis} />}
+      </div>
       <div className='logs'>
         <div className='numbers'>
           <p className='impressions'>{log.impression.toLocaleString()}</p>
